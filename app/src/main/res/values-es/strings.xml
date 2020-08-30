@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lista de tareas</string>
+    <string name="compartilhar">" ¡Oye! Acabo de terminar"</string>
+    <string name="titulo">Título</string>
+    <string name="descricao">Descripción</string>
+</resources>
