@@ -63,6 +63,7 @@ class TarefaAdapter(val listener: TarefaAdapterListener, context: Context) :
             if (tarefa.id == null){
                 tarefa.acao = "cadastrado"
 
+
                 service.insert(tarefa).enqueue(object : Callback<Tarefa> {
                     override fun onFailure(call: Call<Tarefa>, t: Throwable) {
                         TODO("Not yet implemented")
@@ -92,7 +93,7 @@ class TarefaAdapter(val listener: TarefaAdapterListener, context: Context) :
         }
 
         fun novo() : Int {
-            val tarefa = Tarefa("", "", false, "novo")
+            val tarefa = Tarefa("", "", false, -25.513977, -48.515772, "novo")
 
             val position = 0
             tarefas.add(position, tarefa)
@@ -217,6 +218,7 @@ class TarefaAdapter(val listener: TarefaAdapterListener, context: Context) :
             itemView.btnSalvar.setOnClickListener {
                 tarefa.titulo = itemView.textTitulo.text.toString()
                 tarefa.descricao = itemView.textDescricao.text.toString()
+                itemView.
 
                 listener.save(tarefa)
 
